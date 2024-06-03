@@ -25,7 +25,9 @@ const Calculator = () => {
     }
   }, [data]);
 
-  console.log(data);
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <>
@@ -34,7 +36,7 @@ const Calculator = () => {
         <SectionTitle title="Inserisci le informazioni richieste" />
 
         <div className="mt-16 w-3/4 flex flex-col items-start gap-2">
-          <form className="w-full sm:grid sm:grid-cols-1 xl:flex gap-3">
+          <form onSubmit={onSubmitHandler} className="w-full sm:grid sm:grid-cols-1 xl:flex gap-3">
             <div className="xl:w-1/2 mb-5 xl:mb-0">
               <div className="flex">
                 <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
