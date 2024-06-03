@@ -77,7 +77,7 @@ const Calculator = () => {
         {data.amount > 0 && data.period > 0 && (
           <div className="container mx-auto mt-20 w-3/4">
             {results && (
-              <div className="relative xl:overflow-x-auto">
+              <div className="relative overflow-x-auto">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                   <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
@@ -94,9 +94,9 @@ const Calculator = () => {
                   </thead>
                   <tbody>
                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                      <td className="px-6 py-4">€ {results.irpef}</td>
-                      <td className="px-6 py-4">€ {results.salary}</td>
-                      <td className="px-6 py-4">€ {results.monthlySalary}</td>
+                      <td className="px-6 py-4"><span className="sm:hidden xl:inline-block">€</span> {results.irpef}</td>
+                      <td className="px-6 py-4"><span className="sm:hidden xl:inline-block">€</span> {results.salary}</td>
+                      <td className="px-6 py-4"><span className="sm:hidden xl:inline-block">€</span> {results.monthlySalary}</td>
                     </tr>
                   </tbody>
                 </table>
